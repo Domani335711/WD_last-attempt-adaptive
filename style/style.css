@@ -1,0 +1,455 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,p{
+    padding: 0;
+    margin: 0;
+}
+ul,ol{
+    padding: 0;
+    margin: 0;
+    list-style: none;   
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1105px;
+    margin: 0 auto;
+}
+header{
+    background: #EEEFF1;
+}
+.header-top{
+    padding-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+}
+.menu-item{
+    margin-right: 42px;
+}
+.menu-item:last-child{
+    margin-right: 0;
+}
+.menu-link{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+.menu-link:hover{
+    color: #34747A;
+    font-weight: 500;
+}
+.header-bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 140px;
+    justify-content: flex-end;
+    padding-bottom: 146px;
+}
+.bottom-title{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 164.6%;
+    color: #000000;
+    padding-bottom: 40px;
+}
+.bottom-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162.5%;
+    color: #727272;
+    max-width: 540px;
+    padding-bottom: 60px;
+}
+button{
+    border: none;
+    background: #34547A;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162.5%;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding: 25px 41px;
+    cursor: pointer;
+}
+.bottom-desc{
+    margin-left: 131px;
+}
+.me{
+    padding: 119px;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.me-title{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 119%;
+    text-align: center;
+    color: #000000;
+}
+.me-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    text-align: center;
+    color: #727272;
+    max-width: 540px;
+    margin-top: 50px;
+}
+.achievements{
+    background:#34547A;
+    padding: 100px 0;
+}
+.achievements-box{
+    display: flex;
+    justify-content: space-between;
+}
+.box-item{
+    display: flex;
+}
+.box-desc{
+    margin-left: 20px;
+}
+.box-title{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 119%;
+    color: #FFFFFF;
+    margin-top: 3px;
+}
+.box-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163%;
+    color: #FFFFFF;
+}
+footer{
+    background: #34547A;
+    padding: 50px 0;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-left>a{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 119%;
+    color: #FFFFFF;
+}
+.footer-left p{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 162%;
+    color: #FFFFFF;
+    padding-top: 20px;
+}
+.footer-right>a{
+    margin-right:22px;
+}
+.footer-right>a:last-child{
+    margin-right: 0;
+}
+/* адаптив */
+@media (max-width:1024px){
+/*  .menu-link{ ссылки при наведении
+        color: red; окрасятся в красный цвет
+    } */
+    .container{
+        padding: 0 15px;
+    }
+}
+@media (max-width:768px){
+    .achievements-box{
+        flex-wrap: wrap;
+    }
+    .box-item{
+        margin-bottom: 20px;
+    }
+    .box-item:last-child{
+        margin: auto;
+    }
+    .bottom-desc{
+        margin-left: 28px;
+    }
+    .bottom-title{
+        font-size: 32px;
+        padding-bottom: 14px;
+    }
+    .bottom-text{
+        padding-bottom: 18px;
+    }
+}
+@media (max-width:480px){
+    .header-top{
+        flex-direction: column;
+    }
+    .menu-link{
+        font-size: 12px;
+    }
+    .menu-item{
+        margin-right: 30px;
+    }
+    .menu{
+        margin-top: 20px;
+    }
+    .header-bottom{
+        margin-top: 44px;
+        padding-bottom: 44px;
+    }
+    .header-bottom>img{
+        display: none;
+    }
+    .bottom-desc{
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-text{
+        text-align: center;
+        padding-bottom: 24px;
+    }
+    .me{
+        padding: 50px 0;
+    }
+    .me-text{
+        max-width: 460px;
+    }
+    .box-item:last-child{
+        margin: 0;
+    }
+    .achievements{
+        padding: 36px 0;
+    }
+    footer{
+        padding: 20px 0;
+    }
+}
+/* 375px совсем не работает в браузере - 
+ничего не меняется и не отображается ни в коде в браузере, ни при внесении изменений в VSC,
+поэтому закомментировала и не смогла подобрать нужные значения*/
+/* @media (max-width:375px){
+    .header-top{
+        padding: 8px;
+    }
+    .menu-link{
+        font-size: 10px;
+    }
+    .menu-item{
+        margin-right: 12px;
+    }
+    .menu{
+        margin-top: 10px;
+    }
+    .header-bottom{
+        margin-top: 15px;
+        padding-bottom: 25px;
+    }
+    .bottom-title{
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    .bottom-text{
+        font-size: 12px;
+        padding-bottom: 14px;
+    }
+    button {
+        font-size: 12px;
+        padding: 16px 25px;
+        border-radius: 10px;
+    }
+    .me{
+        margin: 25px 25px 0px;
+        padding: 0;
+    }
+    .me-text{
+        margin: 25px;
+    }
+    .achievements{
+        padding: 13px 0;
+    }
+    .box-item{
+        margin-bottom: 8px;
+    }
+    .box-item>img{
+        width:30%;
+    }
+    .box-title{
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    .box-text {
+        font-weight: 300;
+        font-size: 10px;
+        padding-top: 3px;
+    }
+    .box-desc {
+        margin-left: 5px;
+    }
+    footer{
+        padding: 12px 0;
+    }
+    .footer-left>a{
+        font-size: 18px;
+    }
+    .footer-left p {
+        font-weight: 300;
+        font-size: 9px;
+        padding-top: 10px;
+    }
+    .footer-right>a {
+        margin-right: 5px;
+    }
+    .footer-right>img {
+        width: 5%;
+    }
+    .footer-right{
+        display: flex;
+    }
+    .footer-right>a {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .menu-link{
+        font-size: 8px;
+    }
+    .menu-item{
+        margin-right: 10px;
+    }
+    .header-bottom{
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+    .button{
+        font-size: 12px;
+        padding: 15px 28px;
+    }
+} */
+@media (max-width:360px){
+    /* .header-top>img{
+        width: 50%;
+    } */
+    .header-top {
+        padding: 5px;
+    }
+    .menu-link{
+        font-size: 10px;
+    }
+    .menu-item{
+        margin-right: 11px;
+    }
+    .menu{
+        margin-top: 10px;
+    }
+    .header-bottom{
+        margin-top: 15px;
+        padding-bottom: 25px;
+    }
+    .bottom-title{
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    .bottom-text{
+        font-size: 12px;
+        padding-bottom: 14px;
+    }
+    button {
+        font-size: 12px;
+        padding: 16px 25px;
+        border-radius: 10px;
+    }
+    .me{
+        margin: 25px 25px 0px;
+        padding: 0;
+    }
+    .me-text{
+        margin: 25px;
+    }
+    .achievements{
+        padding: 13px 0;
+    }
+    .box-item{
+        margin-bottom: 8px;
+    }
+    .box-item>img{
+        width:30%;
+    }
+    .box-title{
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    .box-text {
+        font-weight: 300;
+        font-size: 10px;
+        padding-top: 3px;
+    }
+    .box-desc {
+        margin-left: 5px;
+    }
+    footer{
+        padding: 12px 0;
+    }
+    .footer-left>a{
+        font-size: 18px;
+    }
+    .footer-left p {
+        font-weight: 300;
+        font-size: 9px;
+        padding-top: 10px;
+    }
+    .footer-right>a {
+        margin-right: 5px;
+    }
+}
+@media (max-width:320px){
+    .menu-link{
+        font-size: 8px;
+        font-weight: 500;
+    }
+    .menu-item{
+        margin-right: 14px;
+    }
+    .bottom-title{
+        font-size: 24px;
+    }
+    .me{
+        margin: 20px 10px 0px;
+    }
+    .me-title {
+        font-weight: 450;
+        font-size: 24px;
+    }
+    .me-text {
+        font-weight: 400;
+        font-size: 12px;
+        margin-top: 12px;
+    }
+}
+
+/* 1200 */
+/* 1024 */
+/* 997 */
+/* 768 */
+/* 480 */
+/* 375 - айфон */
+/* 360 */
+/* 320 */
